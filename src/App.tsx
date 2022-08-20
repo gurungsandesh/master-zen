@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Cursor from './page/cursor';
 import HomePage from './page/homePage';
+import Loader from './page/loader';
 
 interface cursorPositionProps {
   clientX: number
@@ -47,9 +48,8 @@ function App() {
     <div className="App">
       <Cursor clientX={cursorPosition.clientX} clientY={cursorPosition.clientY} />
       <Routes>
-        {/* <Route path='/' element={<Loader />}></Route> */}
+        <Route path='/' element={<Loader />}></Route>
         <Route path='/home' element={<HomePage />}></Route>
-        {/* <Route path='/cursor' element={}></Route > */}
       </Routes>
 
     </div>
