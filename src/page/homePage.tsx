@@ -1,10 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
-import { AiOutlineHome } from "react-icons/ai";
-import { AiOutlineCodepen } from "react-icons/ai";
+import { AiOutlineCodepen, AiOutlineHome, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import { AiOutlineTwitter } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
 const HomePageWrapper = styled.div`

@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import HomePage from './page/homePage';
-import Loader from './page/loader';
+import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import './App.css';
 import Cursor from './page/cursor';
+import HomePage from './page/homePage';
 
 interface cursorPositionProps {
   clientX: number
