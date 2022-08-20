@@ -17,14 +17,14 @@ function App() {
   })
 
   //todo work on hover
-  const onHoverLink = (elem: any) => {
+  // const onHoverLink = (elem: any) => {
 
-    // console.log("its is li", elem);
-    // elem.target.classList.add("addBorder")
-    // if (!elem && elem.tagName === "LI") {
-    // }
+  // console.log("its is li", elem);
+  // elem.target.classList.add("addBorder")
+  // if (!elem && elem.tagName === "LI") {
+  // }
 
-  }
+  // }
 
   const listenMouseMovement = () => {
     window.addEventListener("mousemove", (e: MouseEvent) => {
