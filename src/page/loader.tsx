@@ -46,7 +46,7 @@ function Loader() {
             }
         }, 25);
         return () => clearInterval(interval);
-    }, []);
+    }, [navigate]);
 
 
     return (
