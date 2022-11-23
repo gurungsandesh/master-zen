@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import WorkCard from './component/card';
 import Cursor from './page/cursor';
 import HomePage from './page/homePage';
 import Loader from './page/loader';
@@ -50,6 +51,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Loader />}></Route>
         <Route path='/home' element={<HomePage />}></Route>
+        <Route path='/card' element={<WorkCard heading='Node' techUsed={["Node", "React"]} description={["check", "check"]} imageUrl="./water.jpg" />}></Route>
       </Routes>
 
     </div>

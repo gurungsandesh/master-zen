@@ -47,6 +47,9 @@ const NavBar = styled.div`
         list-style-type: none;
 
         & >li {
+            /* border: 2px solid white; */
+            /* padding: 0.2rem 0rem; */
+            padding: 0.5rem 0rem;
             margin-bottom: 1rem;
             writing-mode: vertical-rl;            
         }
@@ -87,8 +90,8 @@ function HomePage() {
         <HomePageWrapper className='homepage'>
             <div></div>
             <HeadNavbar>
-                Hello! This is Sandesh gurung.
-                <div id='post'>Frontend Developer/Mern Stack /Networking enthusiast</div>
+                {/* Hello! This is Sandesh gurung. */}
+                {/* <div id='post'>Frontend Developer/Mern Stack /Networking enthusiast</div> */}
             </HeadNavbar>
 
             <NavBar>
