@@ -1,61 +1,34 @@
-import { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import WorkCard from './component/card';
-import Cursor from './page/cursor';
-import HomePage from './page/homePage';
-import Loader from './page/loader';
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/all";
+import "./App.css";
+import Layout from "./components/layout";
+import "./fonts/TestFinancierDisplay-Regular.otf";
+import GlobalStyle from "./globalStyle";
+import AboutMe from "./pages/aboutMe";
+import HomePage from "./pages/home";
+import MainTheme from "./theme/mainTheme";
+import Navbar from "./components/navbar/navbar";
 
-interface cursorPositionProps {
-  clientX: number
-  clientY: number
-}
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-function App() {
-
-  const [cursorPosition, setCursorPosition] = useState<cursorPositionProps>({
-    clientX: -100,
-    clientY: -100
-  })
-
-  //todo work on hover
-  // const onHoverLink = (elem: any) => {
-
-  // console.log("its is li", elem);
-  // elem.target.classList.add("addBorder")
-  // if (!elem && elem.tagName === "LI") {
-  // }
-
-  // }
-
-  const listenMouseMovement = () => {
-    window.addEventListener("mousemove", (e: MouseEvent) => {
-      // onHoverLink(e.target)
-      setCursorPosition({
-        clientX: e.clientX,
-        clientY: e.clientY
-      })
-
-    })
-  }
-
-  useEffect(() => {
-    document.body.style.cursor = "none";
-    listenMouseMovement();
-  }, [])
-
-
+const App = () => {
   return (
-    <div className="App">
-      <Cursor clientX={cursorPosition.clientX} clientY={cursorPosition.clientY} />
-      <Routes>
-        <Route path='/' element={<Loader />}></Route>
-        <Route path='/home' element={<HomePage />}></Route>
-        <Route path='/card' element={<WorkCard heading='Node' techUsed={["Node", "React"]} description={["check", "check"]} imageUrl="./water.jpg" />}></Route>
-      </Routes>
-
-    </div>
+    <>
+      <GlobalStyle />
+      <MainTheme>
+        <Navbar />
+        <Layout width={"200vw"}>
+          <div>
+            <HomePage />
+          </div>
+          <div>
+            <AboutMe />
+          </div>
+        </Layout>
+      </MainTheme>
+    </>
   );
-}
+};
 
 export default App;
